@@ -45,3 +45,9 @@
   photo: "images/confidants/tomas.jpg"
   email: "tomas.danis@uni-tuebingen.de"
   bio: "2nd year PhD student at MvL6, ground floor, kitchen side. Come by any time :)"
+
+- name: "Nic Münster"
+  role: "PhD Student"
+  photo: "images/logo.png"
+  # bio:
+  # email:

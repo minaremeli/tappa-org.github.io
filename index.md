@@ -28,9 +28,9 @@ the Tübingen AI ecosystem by addressing common concerns, organizing events, and
 
 ### Upcoming meetings
 {% highlight bash%}
-5th of February, 17:00 @ MvL1 or MvL6, [room tbd]
-5th of March, 17:00 @ MPI-IS, N1.028
-2nd or 9th of April, 17:00 @  MvL1 or MvL6, [room tbd]
+2nd of July, 17:00 @ MPI-IS, N1.028
+6th of August, 17:00 @ MvL1 or MvL6, [room tbd]
+3rd of September, 17:00 @  MPI-IS, N1.028
 {% endhighlight %}
 
 ---

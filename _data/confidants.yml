@@ -8,15 +8,18 @@
 - name: "Laura Iacovissi"
   #role: "PhD Student"
   photo: "images/confidants/laura.jpg"
-  bio: "PhD Student sitting in the 4th level of MvL1, A433. Just pass by!"
+  bio: "PhD Student @ MvL1 room A433. Just pass by!"
   website: "https://fm.ls/laura-iacovissi"
   email: "laura.iacovissi@uni-tuebingen.de"
 
 - name: "Joschka Strüber"
   role: "PhD Student"
   photo: "images/confidants/josch.jpg"
+  email: "joschka.strueber@bethgelab.org"
+  # bio:
 
 - name: "Eric Günter"
+  #role: "PhD Student"
   bio: "PhD Student @ MvL1, 4th floor, office A430"
   photo: "images/confidants/eric.png"
   email: "eric.guenther@uni-tuebingen.de"
@@ -24,27 +27,34 @@
 - name: "Federico D'Agostino"
   role: "PhD Student"
   photo: "images/confidants/federico.jpeg"
+  email: "federico.dagostino@bethgelab.org"
+  # bio:
 
 - name: "Kibidi Neocosmos"
   role: "PhD Student"
   photo: "images/confidants/kibidi.jpg"
+  email: "kibidi.neocosmos@uni-tuebingen.de"
+  # bio:
 
 - name: "Joanna Sliwa"
   #role: "PhD Student"
   photo: "images/confidants/joanna.jpeg"
-  bio: "3rd year PhD student sitting in MvL1, 5th floor (A533)"
+  bio: "PhD student sitting in MvL1, 5th floor (A533)"
   website: "https://joannasliwa.github.io/"
   email: "joanna.sliwa@uni-tuebingen.de"
+  # bio:
 
 - name: "Nikita Kister"
   role: "PhD Student"
   photo: "images/logo.png"
+  # bio:
+  # email:
 
 - name: "Tomáš Daniš"
   #role: "PhD Student"
   photo: "images/confidants/tomas.jpg"
   email: "tomas.danis@uni-tuebingen.de"
-  bio: "2nd year PhD student at MvL6, ground floor, kitchen side. Come by any time :)"
+  bio: "PhD student at MvL6, ground floor, kitchen side. Come by any time :)"
 
 - name: "Nic Münster"
   role: "PhD Student"

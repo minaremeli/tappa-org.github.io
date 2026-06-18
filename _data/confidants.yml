@@ -56,8 +56,8 @@
   email: "tomas.danis@uni-tuebingen.de"
   bio: "PhD student at MvL6, ground floor, kitchen side. Come by any time :)"
 
-- name: "Nic Münster"
+- name: "Nicolas Münster"
   role: "PhD Student"
-  photo: "images/logo.png"
-  # bio:
-  # email:
+  photo: "images/confidants/nic.jpg"
+  bio: "PhD student at MvL6, 3rd floor, opposite side of the kitchen. Feel free to come by!"
+  email: "nicolas.muenster@uni-tuebingen.de"

@@ -1,0 +1,1116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TAPPA Quarterly — Issue 00</title>
+<!-- Fonts are served from this origin, not a third-party CDN, so no visitor IP
+     is disclosed to Google. See fonts/OFL-*.txt for the licences. -->
+<link rel="preload" href="fonts/spectral-800-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/spectral-400-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/inter-600-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="fonts.css">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- ============================================================
+     Placeholder artwork sprite. Every figure on this page is a
+     drawn placeholder in the house palette — swap each <use> for
+     an <img> when the real photograph arrives.
+     ============================================================ -->
+<svg class="sprite" aria-hidden="true" focusable="false">
+  <defs>
+    <symbol id="m-arcs" viewBox="0 0 400 300">
+      <rect width="400" height="300" fill="#08372E"/>
+      <g fill="none" stroke="#7BE0C0" stroke-width="1.2" opacity="0.55">
+        <circle cx="300" cy="150" r="40"/><circle cx="300" cy="150" r="72"/>
+        <circle cx="300" cy="150" r="104"/><circle cx="300" cy="150" r="136"/>
+        <circle cx="300" cy="150" r="168"/><circle cx="300" cy="150" r="200"/>
+      </g>
+      <circle cx="300" cy="150" r="14" fill="#7BE0C0"/>
+    </symbol>
+
+    <symbol id="m-ribbon" viewBox="0 0 400 300">
+      <rect width="400" height="300" fill="#FAF7F1"/>
+      <path d="M0 206 C70 168 110 106 175 100 C245 94 275 158 330 184 C360 198 380 214 400 222 L400 300 L0 300 Z" fill="#0F7A5F" opacity="0.08"/>
+      <path d="M0 168 C70 132 110 74 175 68 C245 62 275 128 330 152 C360 165 380 178 400 184 L400 222 C380 214 360 198 330 184 C275 158 245 94 175 100 C110 106 70 168 0 206 Z" fill="#0F7A5F" opacity="0.14"/>
+      <path d="M0 187 C70 150 110 90 175 84 C245 78 275 143 330 168 C360 181 380 196 400 203" fill="none" stroke="#0F7A5F" stroke-width="2.4"/>
+      <circle cx="80" cy="150" r="4" fill="#141414"/><circle cx="175" cy="84" r="4" fill="#141414"/>
+      <circle cx="330" cy="168" r="4" fill="#141414"/>
+    </symbol>
+
+    <symbol id="m-contour" viewBox="0 0 400 300">
+      <rect width="400" height="300" fill="#FFFFFF"/>
+      <g fill="none" stroke="#0F7A5F" stroke-width="1.1" opacity="0.5">
+        <path d="M-10 60 C90 20 150 96 230 70 C300 48 350 88 410 66"/>
+        <path d="M-10 96 C90 56 150 132 230 106 C300 84 350 124 410 102"/>
+        <path d="M-10 132 C90 92 150 168 230 142 C300 120 350 160 410 138"/>
+        <path d="M-10 168 C90 128 150 204 230 178 C300 156 350 196 410 174"/>
+        <path d="M-10 204 C90 164 150 240 230 214 C300 192 350 232 410 210"/>
+        <path d="M-10 240 C90 200 150 276 230 250 C300 228 350 268 410 246"/>
+      </g>
+      <path d="M-10 150 C90 110 150 186 230 160 C300 138 350 178 410 156" fill="none" stroke="#08372E" stroke-width="2.2"/>
+    </symbol>
+
+    <symbol id="m-matrix" viewBox="0 0 400 300">
+      <rect width="400" height="300" fill="#FAF7F1"/>
+      <g fill="#0F7A5F">
+        <g opacity="0.9"><circle cx="40" cy="60" r="5"/><circle cx="88" cy="60" r="5"/><circle cx="136" cy="60" r="4.4"/><circle cx="184" cy="60" r="3.8"/><circle cx="232" cy="60" r="3"/><circle cx="280" cy="60" r="2.3"/><circle cx="328" cy="60" r="1.7"/></g>
+        <g opacity="0.8"><circle cx="40" cy="110" r="5"/><circle cx="88" cy="110" r="4.6"/><circle cx="136" cy="110" r="4"/><circle cx="184" cy="110" r="3.3"/><circle cx="232" cy="110" r="2.6"/><circle cx="280" cy="110" r="2"/><circle cx="328" cy="110" r="1.4"/></g>
+        <g opacity="0.7"><circle cx="40" cy="160" r="4.4"/><circle cx="88" cy="160" r="4"/><circle cx="136" cy="160" r="3.4"/><circle cx="184" cy="160" r="2.8"/><circle cx="232" cy="160" r="2.2"/><circle cx="280" cy="160" r="1.6"/><circle cx="328" cy="160" r="1.2"/></g>
+        <g opacity="0.6"><circle cx="40" cy="210" r="3.6"/><circle cx="88" cy="210" r="3.2"/><circle cx="136" cy="210" r="2.7"/><circle cx="184" cy="210" r="2.2"/><circle cx="232" cy="210" r="1.8"/><circle cx="280" cy="210" r="1.3"/><circle cx="328" cy="210" r="1"/></g>
+        <g opacity="0.5"><circle cx="40" cy="256" r="2.8"/><circle cx="88" cy="256" r="2.4"/><circle cx="136" cy="256" r="2"/><circle cx="184" cy="256" r="1.7"/><circle cx="232" cy="256" r="1.4"/><circle cx="280" cy="256" r="1.1"/><circle cx="328" cy="256" r="0.9"/></g>
+      </g>
+    </symbol>
+
+    <symbol id="m-steps" viewBox="0 0 400 300">
+      <rect width="400" height="300" fill="#FFFFFF"/>
+      <g fill="#0F7A5F">
+        <rect x="34" y="196" width="44" height="74" opacity="0.28"/>
+        <rect x="94" y="156" width="44" height="114" opacity="0.42"/>
+        <rect x="154" y="104" width="44" height="166" opacity="0.58"/>
+        <rect x="214" y="140" width="44" height="130" opacity="0.74"/>
+        <rect x="274" y="72" width="44" height="198" opacity="0.9"/>
+      </g>
+      <line x1="20" y1="270" x2="380" y2="270" stroke="#141414" stroke-width="1.4"/>
+    </symbol>
+
+    <symbol id="m-calib" viewBox="0 0 400 300">
+      <rect width="400" height="300" fill="#FAF7F1"/>
+      <rect x="56" y="34" width="288" height="232" fill="none" stroke="#D8D8D2"/>
+      <line x1="56" y1="266" x2="344" y2="34" stroke="#6B6B66" stroke-width="1.4" stroke-dasharray="6 5"/>
+      <path d="M56 266 C136 258 186 220 240 164 C286 116 316 70 344 34" fill="none" stroke="#0F7A5F" stroke-width="2.6"/>
+      <circle cx="240" cy="164" r="5" fill="#0F7A5F"/>
+    </symbol>
+
+    <symbol id="m-rings" viewBox="0 0 400 300">
+      <rect width="400" height="300" fill="#08372E"/>
+      <g fill="none" stroke="#7BE0C0" stroke-width="1.4" opacity="0.6">
+        <circle cx="130" cy="150" r="26"/><circle cx="130" cy="150" r="50"/><circle cx="130" cy="150" r="74"/>
+        <circle cx="270" cy="150" r="26"/><circle cx="270" cy="150" r="50"/><circle cx="270" cy="150" r="74"/>
+      </g>
+      <circle cx="130" cy="150" r="10" fill="#7BE0C0" opacity="0.9"/>
+      <circle cx="270" cy="150" r="10" fill="#7BE0C0" opacity="0.9"/>
+    </symbol>
+
+    <symbol id="m-hatch" viewBox="0 0 400 300">
+      <rect width="400" height="300" fill="#FFFFFF"/>
+      <g stroke="#0F7A5F" stroke-width="7" opacity="0.16">
+        <path d="M-60 300 L120 -40"/><path d="M0 300 L180 -40"/><path d="M60 300 L240 -40"/>
+        <path d="M120 300 L300 -40"/><path d="M180 300 L360 -40"/><path d="M240 300 L420 -40"/>
+        <path d="M300 300 L480 -40"/>
+      </g>
+      <g stroke="#08372E" stroke-width="2.4">
+        <path d="M40 300 L220 -40"/><path d="M220 300 L400 -40"/>
+      </g>
+    </symbol>
+
+    <symbol id="m-frame" viewBox="0 0 400 300">
+      <rect width="400" height="300" fill="#FAF7F1"/>
+      <rect x="28" y="24" width="344" height="252" fill="none" stroke="#0F7A5F" stroke-width="1.6" opacity="0.5"/>
+      <path d="M28 220 L140 130 L212 194 L286 132 L372 208" fill="none" stroke="#0F7A5F" stroke-width="2.2"/>
+      <circle cx="308" cy="76" r="20" fill="none" stroke="#0F7A5F" stroke-width="2.2"/>
+    </symbol>
+  </defs>
+</svg>
+
+<div class="progress" id="progress"></div>
+
+<header class="topbar">
+  <div class="topbar-inner">
+    <a class="mark" href="#top">TAPPA <span>Quarterly</span></a>
+    <nav id="nav">
+      <a href="#editorial">Editorial</a>
+      <a href="#people">People</a>
+      <a href="#startups">Startups</a>
+      <a href="#research">Research</a>
+      <a href="#fun">Fun</a>
+      <a href="#life">Life</a>
+      <a href="#numbers">Numbers</a>
+      <a href="#final">Final Page</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- ============================ COVER ============================ -->
+  <section class="cover">
+    <svg class="cover-art" viewBox="0 0 400 300" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+      <g fill="none" stroke="#7BE0C0" stroke-width="0.7" opacity="0.22">
+        <circle cx="330" cy="150" r="40"/><circle cx="330" cy="150" r="76"/>
+        <circle cx="330" cy="150" r="112"/><circle cx="330" cy="150" r="148"/>
+        <circle cx="330" cy="150" r="184"/><circle cx="330" cy="150" r="220"/>
+        <circle cx="330" cy="150" r="256"/>
+      </g>
+    </svg>
+    <canvas class="cover-field" id="cover-field" aria-hidden="true"></canvas>
+
+    <div class="cover-top">
+      <span>Issue 00 — Summer 2026</span>
+      <span>tappa-org.github.io</span>
+    </div>
+
+    <div class="lockup-wrap">
+      <span class="brand">TAPPA</span>
+      <span class="quarterly">Quarterly</span>
+      <p class="cover-desc">The magazine of the Tübingen AI PhD &amp; postdoc community — interviews, research, startups, life and the occasional puzzle.</p>
+    </div>
+
+    <div class="cover-lead">
+      <div class="cover-lead-inner">
+        <div>
+          <div class="kicker kicker-mint">The Interview · People</div>
+          <h1 class="cover-headline">The Shape of Uncertainty</h1>
+          <p class="cover-standfirst">A conversation with Philipp Hennig on probability, patience, and machines that know what they don't know.</p>
+          <a class="cover-cta" href="#people">Read the interview</a>
+        </div>
+        <div class="teasers">
+          <a class="teaser" href="#startups">
+            <span class="teaser-thumb"><svg preserveAspectRatio="xMidYMid slice"><use href="#m-matrix"/></svg></span>
+            <span>
+              <span class="teaser-label">Startups</span>
+              <span class="teaser-title">Inside KE:SAI</span>
+              <span class="teaser-blurb">Andreas Geiger's bet on structured, scalable AI</span>
+            </span>
+          </a>
+          <a class="teaser" href="#research">
+            <span class="teaser-thumb"><svg preserveAspectRatio="xMidYMid slice"><use href="#m-calib"/></svg></span>
+            <span>
+              <span class="teaser-label">Research</span>
+              <span class="teaser-title">From the Friday Talks</span>
+              <span class="teaser-blurb">The quarter's ideas, before they became papers</span>
+            </span>
+          </a>
+          <a class="teaser" href="#life">
+            <span class="teaser-thumb"><svg preserveAspectRatio="xMidYMid slice"><use href="#m-rings"/></svg></span>
+            <span>
+              <span class="teaser-label">Life · Fun</span>
+              <span class="teaser-title">Best Coffee on Campus, Settled</span>
+              <span class="teaser-blurb">Plus: food near the AI Center, and a puzzle</span>
+            </span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================ CONTENTS ============================ -->
+  <section class="contents">
+    <div class="col">
+      <div class="contents-head">In this issue</div>
+      <ul class="contents-list">
+        <li><a href="#editorial"><span class="n">01</span><span class="t">Editorial</span></a></li>
+        <li><a href="#people"><span class="n">02</span><span class="t">People</span></a></li>
+        <li><a href="#startups"><span class="n">03</span><span class="t">Startups</span></a></li>
+        <li><a href="#research"><span class="n">04</span><span class="t">Research</span></a></li>
+        <li><a href="#fun"><span class="n">05</span><span class="t">Fun</span></a></li>
+        <li><a href="#life"><span class="n">06</span><span class="t">Life</span></a></li>
+        <li><a href="#numbers"><span class="n">07</span><span class="t">By the Numbers</span></a></li>
+        <li><a href="#final"><span class="n">08</span><span class="t">Final Page</span></a></li>
+        <li><a href="#credits"><span class="n">09</span><span class="t">Masthead &amp; Credits</span></a></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ============================ EDITORIAL ============================ -->
+  <section class="chapter" id="editorial">
+    <div class="col">
+      <div class="chapter-head">
+        <span class="n">01</span>
+        <h2>Editorial</h2>
+        <span class="sub">From the editors</span>
+      </div>
+      <div class="accent-rule"></div>
+
+      <div class="split split-reverse">
+        <figure class="fig">
+          <div class="ph ph-4-3">
+            <svg preserveAspectRatio="xMidYMid slice"><use href="#m-frame"/></svg>
+            <span class="ph-badge">Placeholder</span>
+          </div>
+          <figcaption class="figcaption">
+            <span class="fignum">Figure 1 |</span> Cover concept for Issue 00.
+            <span class="credit">Illustration: TAPPA design team</span>
+          </figcaption>
+        </figure>
+        <div>
+          <h3 class="sub-headline">Welcome to Issue 00</h3>
+          <p class="standfirst">Why this magazine exists, who it is for, and what you can expect to find in it every quarter.</p>
+          <p>[Editorial copy goes here — paste the draft from Notion.]</p>
+          <p>[Second paragraph.]</p>
+          <a class="arrow-link" href="#credits">→ Masthead &amp; credits</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================ BREAK ============================ -->
+  <figure class="break">
+    <div class="ph ph-break">
+      <svg preserveAspectRatio="xMidYMid slice"><use href="#m-contour"/></svg>
+      <span class="ph-badge">Placeholder</span>
+    </div>
+    <figcaption class="figcaption col">
+      <span class="fignum">Figure 2 |</span> A full-bleed image break sits between chapters — drop a wide photograph of the institute here.
+      <span class="credit">Illustration: TAPPA design team</span>
+    </figcaption>
+  </figure>
+
+  <!-- ============================ PEOPLE ============================ -->
+  <section class="chapter" id="people">
+    <div class="col">
+      <div class="chapter-head">
+        <span class="n">02</span>
+        <h2>People</h2>
+        <span class="sub">The interview</span>
+      </div>
+      <div class="accent-rule"></div>
+
+      <div class="split split-wide">
+        <div>
+          <div class="kicker">The Interview</div>
+          <h3 class="feature-headline">The Shape of Uncertainty</h3>
+          <p class="standfirst">Philipp Hennig has spent a career arguing that computation itself is a form of inference. Over coffee near the institute, we asked him what that means for the next generation of researchers in Tübingen — and what he wishes someone had told him at the start.</p>
+          <div class="byline">Interview by Haiwen · Photographs by the TAPPA design team · <span id="read-time"></span></div>
+        </div>
+        <figure class="fig">
+          <div class="ph ph-portrait">
+            <svg preserveAspectRatio="xMidYMid slice"><use href="#m-arcs"/></svg>
+            <span class="ph-badge ph-badge-light">Portrait placeholder</span>
+          </div>
+          <figcaption class="figcaption">
+            <span class="fignum">Figure 3 |</span> Philipp Hennig, photographed near the institute.
+            <span class="credit">Photo: —— · credit the photographer before publishing</span>
+          </figcaption>
+        </figure>
+      </div>
+
+      <div class="feature-body">
+        <p>There is a particular kind of calm in the way Philipp Hennig talks about hard problems, as though every open question were simply a distribution waiting to be narrowed. We began, as good interviews should, with something small: the walk to work.</p>
+        <p>“I think better when I'm moving,” he says. “Most of what I believe about probabilistic numerics started as something half-formed on the way between two buildings.” It is a fitting origin for a research programme that treats the act of computing as the act of learning — each step a measurement, each measurement an update.</p>
+        <p>His point, made gently but insistently, is that uncertainty is not a nuisance to be engineered away. It is information. A model that reports its own confidence honestly is more useful, and more scientific, than one that simply asserts.</p>
+      </div>
+
+      <blockquote class="pullquote">
+        <p>“A method that knows what it doesn't know is worth more than one that is merely confident.”</p>
+      </blockquote>
+
+      <div class="feature-body">
+        <p>We turned to Tübingen itself. What makes the place work, he suggests, is density without hierarchy: a PhD student can corner a professor at a Friday talk and be taken seriously. “The corridor conversations are the research,” he says. “The papers come later.”</p>
+        <p>Asked what he would tell a new doctoral student, he pauses longer than for any other question. “Pick a problem you would be happy to fail at for three years. The failing is most of it. If the failing would still be interesting, you've chosen well.”</p>
+      </div>
+
+      <figure class="fig fig-wide gp-figure">
+        <div class="gp-head">
+          <span class="gp-label">Try it — click anywhere on the figure to add an observation</span>
+          <span class="gp-controls">
+            <span class="gp-count" id="gp-count">3 observations</span>
+            <button class="gp-reset" type="button" id="gp-reset">Reset</button>
+          </span>
+        </div>
+        <div class="ph ph-21-9 gp-stage">
+          <canvas id="gp-canvas" tabindex="0"
+                  role="img"
+                  aria-label="An interactive Gaussian process posterior. Click to add observations; the uncertainty bands narrow near data and widen away from it."></canvas>
+        </div>
+        <figcaption class="figcaption">
+          <span class="fignum">Figure 4 |</span> Where the data is dense the posterior is confident; between observations the bands widen. Add points and watch the model admit what it doesn't know — the interview's argument, made playable.
+          <span class="credit">Interactive figure: TAPPA design team</span>
+        </figcaption>
+      </figure>
+
+      <div class="feature-body feature-body-tail">
+        <p>By the end, the coffee long cold, his optimism had become contagious. The machines, he reminds us, are not the point. “We are building instruments for thinking. The interesting part is what we choose to point them at.”</p>
+      </div>
+
+      <div class="cards cards-2 cards-top-rule">
+        <a class="card" href="#">
+          <div class="ph ph-16-9">
+            <svg preserveAspectRatio="xMidYMid slice"><use href="#m-matrix"/></svg>
+            <span class="ph-badge">Placeholder</span>
+          </div>
+          <div class="kicker">Spotlight</div>
+          <h4>PhD / Postdoc Spotlight</h4>
+          <p>One student or postdoc, in their own words, on what they are working on and why it matters to them.</p>
+          <span class="arrow-link">→ Read the spotlight</span>
+        </a>
+        <a class="card" href="#">
+          <div class="ph ph-16-9">
+            <svg preserveAspectRatio="xMidYMid slice"><use href="#m-hatch"/></svg>
+            <span class="ph-badge">Placeholder</span>
+          </div>
+          <div class="kicker">Nominate</div>
+          <h4>Who should we feature next?</h4>
+          <p>Know someone whose work deserves a page? Send us a name and a sentence.</p>
+          <span class="arrow-link">→ Nominate in the channel</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================ STARTUPS ============================ -->
+  <section class="chapter chapter-warm" id="startups">
+    <div class="col">
+      <div class="chapter-head">
+        <span class="n">03</span>
+        <h2>Startups</h2>
+        <span class="sub">Spin-outs from the Tübingen AI ecosystem</span>
+      </div>
+      <div class="accent-rule"></div>
+
+      <div class="split">
+        <figure class="fig">
+          <div class="ph ph-4-3">
+            <svg preserveAspectRatio="xMidYMid slice"><use href="#m-steps"/></svg>
+            <span class="ph-badge">Placeholder</span>
+          </div>
+          <figcaption class="figcaption">
+            <span class="fignum">Figure 5 |</span> Inside the KE:SAI office.
+            <span class="credit">Photo: —— · credit the photographer before publishing</span>
+          </figcaption>
+        </figure>
+        <div>
+          <div class="kicker">Startups</div>
+          <h3 class="sub-headline">Inside KE:SAI</h3>
+          <p>Andreas Geiger's bet on structured, scalable AI — what the team is building, who they are hiring, and what it means for people finishing a PhD here.</p>
+          <a class="arrow-link" href="#">→ Read the profile</a>
+
+          <div class="aside-box" style="margin-top:26px">
+            <div class="aside-heading">In Brief</div>
+            <ul>
+              <li>[Funding, hiring or milestone note — one line.]</li>
+              <li>[Second short item.]</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================ RESEARCH ============================ -->
+  <section class="chapter" id="research">
+    <div class="col">
+      <div class="chapter-head">
+        <span class="n">04</span>
+        <h2>Research</h2>
+        <span class="sub">Highlights from the Friday Talks &amp; local labs</span>
+      </div>
+      <div class="accent-rule"></div>
+
+      <div class="cards cards-3">
+        <a class="card" href="#">
+          <div class="ph ph-4-3">
+            <svg preserveAspectRatio="xMidYMid slice"><use href="#m-contour"/></svg>
+            <span class="ph-badge">Placeholder</span>
+          </div>
+          <div class="kicker">From the Friday Talks</div>
+          <h4>A Quarter of Friday Talks</h4>
+          <p>The Friday series is where half the institute's ideas get their first audience. We recap the three talks that drew the longest hallway conversations afterwards — each explained for people from a different corner of the field.</p>
+          <span class="arrow-link">→ Recordings &amp; slides inside</span>
+        </a>
+
+        <a class="card" href="#">
+          <div class="ph ph-4-3">
+            <svg preserveAspectRatio="xMidYMid slice"><use href="#m-calib"/></svg>
+            <span class="ph-badge">Placeholder</span>
+          </div>
+          <div class="kicker">From the Friday Talks</div>
+          <h4>When Calibration Beats Accuracy</h4>
+          <p>A standout talk this quarter asked an uncomfortable question: if two models score the same, is the one that knows its own limits the better scientist? The argument, and the lively discussion that followed, in plain language.</p>
+          <span class="arrow-link">→ Watch the recording</span>
+        </a>
+
+        <a class="card" href="#">
+          <div class="ph ph-4-3">
+            <svg preserveAspectRatio="xMidYMid slice"><use href="#m-ribbon"/></svg>
+            <span class="ph-badge">Placeholder</span>
+          </div>
+          <div class="kicker">Method</div>
+          <h4>The Quiet Return of Gaussian Processes</h4>
+          <p>Once written off as too slow for the deep-learning era, probabilistic methods are finding new life at the edges — uncertainty estimates, experimental design, small-data science.</p>
+          <span class="arrow-link">→ Read the paper</span>
+        </a>
+      </div>
+
+      <div class="aside-box aside-wide">
+        <div class="aside-heading">In Brief</div>
+        <ul class="aside-inline">
+          <li>Three new posters took the summer poster-session prizes — abstracts and links inside.</li>
+          <li>A cross-lab reading group on agents starts in October; sign-up in the channel.</li>
+          <li>Two Tübingen papers landed at the summer venues; congratulations to the teams.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================ BREAK ============================ -->
+  <figure class="break break-deep">
+    <div class="ph ph-break">
+      <svg preserveAspectRatio="xMidYMid slice"><use href="#m-rings"/></svg>
+      <span class="ph-badge ph-badge-light">Placeholder</span>
+    </div>
+    <figcaption class="figcaption col">
+      <span class="fignum">Figure 6 |</span> Second full-bleed break — a good place for the best photograph of the quarter.
+      <span class="credit">Illustration: TAPPA design team</span>
+    </figcaption>
+  </figure>
+
+  <!-- ============================ FUN ============================ -->
+  <section class="chapter" id="fun">
+    <div class="col">
+      <div class="chapter-head">
+        <span class="n">05</span>
+        <h2>Fun</h2>
+        <span class="sub">Photos, events and the quarter ahead</span>
+      </div>
+      <div class="accent-rule"></div>
+
+      <div class="cards cards-2">
+        <a class="card" href="#">
+          <div class="ph ph-16-9">
+            <svg preserveAspectRatio="xMidYMid slice"><use href="#m-frame"/></svg>
+            <span class="ph-badge">Placeholder</span>
+          </div>
+          <div class="kicker">Photos</div>
+          <h4>Photos of the Quarter</h4>
+          <p>Recaps, candid shots, and nominations for next quarter's best photo.</p>
+          <span class="arrow-link">→ Submit a photo</span>
+        </a>
+        <a class="card" href="#">
+          <div class="ph ph-16-9">
+            <svg preserveAspectRatio="xMidYMid slice"><use href="#m-hatch"/></svg>
+            <span class="ph-badge">Placeholder</span>
+          </div>
+          <div class="kicker">Events</div>
+          <h4>Event Recap &amp; Preview</h4>
+          <p>What happened last quarter, and what is coming up.</p>
+        </a>
+      </div>
+
+      <div class="split split-wide" style="margin-top:48px">
+        <!-- ---------------- what's on ---------------- -->
+        <div>
+          <div class="kicker">Calendar</div>
+          <h3 class="sub-headline">What's On — The Quarter Ahead</h3>
+          <p>Talks, socials and deadlines worth putting in the calendar now. Filter by kind, then add any of them to your own calendar.</p>
+
+          <div class="cal" id="calendar">
+            <div class="cal-filters" role="group" aria-label="Filter events by kind">
+              <button class="cal-chip is-on" type="button" data-filter="all" aria-pressed="true">All</button>
+              <button class="cal-chip" type="button" data-filter="academic" aria-pressed="false">Academic</button>
+              <button class="cal-chip" type="button" data-filter="entrepreneurial" aria-pressed="false">Entrepreneurial</button>
+              <button class="cal-chip" type="button" data-filter="social" aria-pressed="false">Social</button>
+              <button class="cal-chip" type="button" data-filter="sporty" aria-pressed="false">Sporty</button>
+              <button class="cal-chip" type="button" data-filter="food" aria-pressed="false">Food &amp; craft</button>
+            </div>
+
+            <ul class="cal-list">
+              <li class="cal-item" data-kind="academic scientific entrepreneurial"
+                  data-start="2026-09-09T09:30" data-end="2026-09-09T21:00"
+                  data-title="Cyber Valley Day 2026" data-where="Maria-von-Linden-Strasse 1, Tübingen">
+                <span class="cal-date"><span class="cal-day">09</span><span class="cal-mon">Sep</span></span>
+                <span class="cal-body">
+                  <span class="cal-kind">Academic · Entrepreneurial</span>
+                  <a class="cal-title" href="https://www.eventbrite.de/e/cyber-valley-day-2026-tickets-1988826009131" target="_blank" rel="noopener noreferrer">Cyber Valley Day</a>
+                  <span class="cal-meta">9:30–21:00 · Maria-von-Linden-Strasse 1</span>
+                  <span class="cal-desc">Ten years of the Cyber Valley Innovation Campus, with short scientific inputs and an exhibition of research projects.</span>
+                  <a class="cal-reg" href="https://www.eventbrite.de/e/cyber-valley-day-2026-tickets-1988826009131" target="_blank" rel="noopener noreferrer">Tickets →</a>
+                </span>
+                <button class="cal-add" type="button">Add</button>
+              </li>
+
+              <li class="cal-item" data-kind="academic scientific" data-allday="true"
+                  data-start="2026-09-14" data-end="2026-09-17"
+                  data-title="Knowing — AI (10th DGEKW Digital Anthropology conference)" data-where="Alte Aula, University of Tübingen">
+                <span class="cal-date"><span class="cal-day">14–16</span><span class="cal-mon">Sep</span></span>
+                <span class="cal-body">
+                  <span class="cal-kind">Academic</span>
+                  <a class="cal-title" href="https://uni-tuebingen.de/de/295071" target="_blank" rel="noopener noreferrer">Knowing — AI: Anthropological and Interdisciplinary Perspectives on Knowledge Production</a>
+                  <span class="cal-meta">Alte Aula, University of Tübingen</span>
+                  <span class="cal-desc">The 10th DGEKW Digital Anthropology conference, examining how knowledge is made with and beyond AI.</span>
+                  <a class="cal-reg" href="https://docs.google.com/forms/d/e/1FAIpQLSchSwmWObzhehvc403XzpCQadZl905vP2Ydl1t9QuAyfa8pew/viewform" target="_blank" rel="noopener noreferrer">Register →</a>
+                </span>
+                <button class="cal-add" type="button">Add</button>
+              </li>
+
+              <li class="cal-item" data-kind="food international handcraft" data-allday="true"
+                  data-start="2026-09-16" data-end="2026-09-21"
+                  data-title="Umbria-Provence Market" data-where="Tübingen old town">
+                <span class="cal-date"><span class="cal-day">16–20</span><span class="cal-mon">Sep</span></span>
+                <span class="cal-body">
+                  <span class="cal-kind">Food · International · Handcraft</span>
+                  <a class="cal-title" href="https://www.tuebingen.de/veranstaltungen#/484" target="_blank" rel="noopener noreferrer">Umbria-Provence Market</a>
+                  <span class="cal-meta">Tübingen old town</span>
+                  <span class="cal-desc">Food and handcraft from the Italian region of Umbria and the French region of Provence.</span>
+                </span>
+                <button class="cal-add" type="button">Add</button>
+              </li>
+
+              <li class="cal-item" data-kind="sporty social" data-allday="true"
+                  data-start="2026-09-20" data-end="2026-09-21"
+                  data-title="Erbe-Lauf" data-where="Tübingen old town">
+                <span class="cal-date"><span class="cal-day">20</span><span class="cal-mon">Sep</span></span>
+                <span class="cal-body">
+                  <span class="cal-kind">Sporty · Social</span>
+                  <a class="cal-title" href="https://www.tuebinger-erbe-lauf.de/" target="_blank" rel="noopener noreferrer">Erbe-Lauf</a>
+                  <span class="cal-meta">Tübingen old town</span>
+                  <span class="cal-desc">A 10 km run plus kids' runs, a team event and the handbike championship. Fun to run or to cheer.</span>
+                  <a class="cal-reg" href="https://www.tuebinger-erbe-lauf.de/anmeldung" target="_blank" rel="noopener noreferrer">Sign up to run →</a>
+                </span>
+                <button class="cal-add" type="button">Add</button>
+              </li>
+
+              <li class="cal-item" data-kind="academic scientific entrepreneurial" data-allday="true"
+                  data-start="2026-10-07" data-end="2026-10-09"
+                  data-title="All Hands Meeting of AI Centers in Germany" data-where="Messe Stuttgart">
+                <span class="cal-date"><span class="cal-day">7–8</span><span class="cal-mon">Oct</span></span>
+                <span class="cal-body">
+                  <span class="cal-kind">Academic · Entrepreneurial</span>
+                  <a class="cal-title" href="https://fro.tuebingen.ai/" target="_blank" rel="noopener noreferrer">All Hands Meeting of AI Centers in Germany</a>
+                  <span class="cal-meta">Messe Stuttgart</span>
+                  <span class="cal-desc">The Frontier AI Innovation Summit brings the German AI Excellence Centers together with the ELIAS Alliance Annual Meeting.</span>
+                </span>
+                <button class="cal-add" type="button">Add</button>
+              </li>
+
+              <li class="cal-item" data-kind="social"
+                  data-start="2026-10-10T14:00" data-end="2026-10-10T16:00"
+                  data-title="Tübinger Duck-Race" data-where="Neckar river, Tübingen">
+                <span class="cal-date"><span class="cal-day">10</span><span class="cal-mon">Oct</span></span>
+                <span class="cal-body">
+                  <span class="cal-kind">Social</span>
+                  <a class="cal-title" href="https://www.tuebinger-entenrennen.de/" target="_blank" rel="noopener noreferrer">Tübinger Duck-Race</a>
+                  <span class="cal-meta">14:00 · Neckar river</span>
+                  <span class="cal-desc">Which rubber duck runs down the Neckar fastest? Bet on your duck.</span>
+                  <a class="cal-reg" href="https://www.tuebinger-entenrennen.de/#kaufen" target="_blank" rel="noopener noreferrer">Buy a duck →</a>
+                </span>
+                <button class="cal-add" type="button">Add</button>
+              </li>
+            </ul>
+
+            <p class="cal-foot">
+              <span id="cal-count" aria-live="polite">6 events</span>
+              <button class="cal-all" type="button" id="cal-all">Download all as .ics</button>
+            </p>
+          </div>
+          <p class="cal-credit">Compiled by rabanus. More at <a href="https://www.tuebingen.de/veranstaltungen#/" target="_blank" rel="noopener noreferrer">tuebingen.de/veranstaltungen</a>.</p>
+        </div>
+
+        <!-- ---------------- german word ---------------- -->
+        <div>
+          <div class="kicker">Language</div>
+          <h3 class="sub-headline">Word &amp; Idiom of the Quarter</h3>
+          <p>Two to carry into the next quarter. Tap a card to turn it over.</p>
+
+          <div class="flashcards">
+            <button class="flash flash-tall" type="button" aria-pressed="false">
+              <span class="flash-inner">
+                <span class="flash-face flash-front">
+                  <span class="flash-tag">Idiom</span>
+                  <span class="flash-term">„Das bricht dir auch keinen Zacken aus der Krone.“</span>
+                  <span class="flash-hint">Tap to reveal</span>
+                </span>
+                <span class="flash-face flash-back">
+                  <span class="flash-tag">Idiom</span>
+                  <span class="flash-def">Word for word: “this won't break a spike off your crown”. Say it to someone refusing a task they consider beneath their pay grade.</span>
+                </span>
+              </span>
+            </button>
+
+            <button class="flash flash-tall" type="button" aria-pressed="false">
+              <span class="flash-inner">
+                <span class="flash-face flash-front">
+                  <span class="flash-tag">Word</span>
+                  <span class="flash-term">halt</span>
+                  <span class="flash-hint">Tap to reveal</span>
+                </span>
+                <span class="flash-face flash-back">
+                  <span class="flash-tag">Word</span>
+                  <span class="flash-def">Means “stop” or “hold” — but also works as an intensifier, close to the English “just”, as in “it's just the way it is”.</span>
+                  <span class="flash-use">„Ist halt so.“ · „Kann ich halt nichts für.“ · „Sei halt netter.“</span>
+                  <span class="flash-note">All of them sound snappier with <em>halt</em> — which makes it the perfect tool for professional conversations about the potential flaws in your work.</span>
+                </span>
+              </span>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <figure class="fig fig-wide">
+        <div class="ph ph-21-9 ph-empty">
+          <span class="ph-empty-label">Photo of the Quarter — awaiting submission</span>
+        </div>
+        <figcaption class="figcaption">
+          <span class="fignum">Photo of the Quarter |</span> Submitted by the community, chosen by your votes. Drop the winning shot in here.
+          <span class="credit">Photo: —— · credit the photographer before publishing</span>
+        </figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- ============================ LIFE ============================ -->
+  <section class="chapter chapter-warm" id="life">
+    <div class="col">
+      <div class="chapter-head">
+        <span class="n">06</span>
+        <h2>Life</h2>
+        <span class="sub">Around the AI Center — and beyond the desk</span>
+      </div>
+      <div class="accent-rule"></div>
+
+      <div class="split split-reverse">
+        <figure class="fig">
+          <div class="ph ph-4-3">
+            <svg preserveAspectRatio="xMidYMid slice"><use href="#m-rings"/></svg>
+            <span class="ph-badge ph-badge-light">Placeholder</span>
+          </div>
+          <figcaption class="figcaption">
+            <span class="fignum">Figure 7 |</span> The contenders, ranked by the community.
+            <span class="credit">Illustration: TAPPA design team</span>
+          </figcaption>
+        </figure>
+
+        <div>
+          <div class="kicker">Life · Poll</div>
+          <h3 class="sub-headline">Best Coffee, Settled</h3>
+          <p>We asked, you voted: the unofficial caffeine ranking within ten minutes of the institute. The rivalry got surprisingly heated.</p>
+
+          <!-- data-api: paste the deployed Worker URL here (see backend/README.md).
+               Left empty, the poll falls back to a local mock so the page works offline. -->
+          <div class="poll" id="poll" data-poll="coffee-2026-00" data-api="">
+            <button class="poll-option" type="button" data-key="cafe1" data-base="41">
+              <span class="poll-label">Café no. 1</span>
+              <span class="bar"><span class="fill"></span></span>
+              <span class="pct">41%</span>
+            </button>
+            <button class="poll-option" type="button" data-key="cafe2" data-base="29">
+              <span class="poll-label">Café no. 2</span>
+              <span class="bar"><span class="fill"></span></span>
+              <span class="pct">29%</span>
+            </button>
+            <button class="poll-option" type="button" data-key="cafe3" data-base="19">
+              <span class="poll-label">Café no. 3</span>
+              <span class="bar"><span class="fill"></span></span>
+              <span class="pct">19%</span>
+            </button>
+            <button class="poll-option" type="button" data-key="lab" data-base="11">
+              <span class="poll-label">The lab machine</span>
+              <span class="bar"><span class="fill"></span></span>
+              <span class="pct">11%</span>
+            </button>
+          </div>
+
+          <p class="poll-meta">
+            <span id="poll-status">Cast your vote — pick one.</span>
+            <button class="poll-reset" type="button" id="poll-reset" hidden>Change vote</button>
+          </p>
+          <p class="poll-note">One vote per reader, counted on the server. No account, no cookie beyond remembering your own choice, and nothing personal is stored.</p>
+          <a class="arrow-link" href="#">→ Vote for next issue in the channel</a>
+        </div>
+      </div>
+
+      <!-- ---------------- ice cream ---------------- -->
+      <div class="cards-top-rule" id="icecream">
+        <div class="kicker">Life · Ice Cream</div>
+        <h3 class="feature-headline">Ice Cream Parlours of Tübingen, Rated</h3>
+        <p class="standfirst">Summer came and went and came back again, and there will be more of it — probably even this year, thanks to global heating. All the more important, then, to know where to cool off. A small interdisciplinary, international expert team tested more or less every ice cream parlour in and around Tübingen to produce this obviously exhaustive pro-and-contra list.</p>
+        <div class="byline">By Fynn · The parlours are i.i.d. randomly ordered</div>
+
+        <div class="scoops-bar">
+          <span class="scoops-count" id="scoops-count" aria-live="polite">7 parlours</span>
+          <span class="scoops-actions">
+            <button class="scoops-btn" type="button" id="scoops-fav" aria-pressed="false">Experts' picks only</button>
+            <button class="scoops-btn" type="button" id="scoops-shuffle">Re-randomise ↻</button>
+          </span>
+        </div>
+
+        <div class="scoops" id="scoops">
+          <article class="scoop is-fav" data-fav="true">
+            <h4 class="scoop-name">Zuckerbäck <span class="scoop-star" title="Expert favourite" aria-label="Expert favourite">★</span></h4>
+            <ul class="scoop-list scoop-pro">
+              <li>Many options are vegan</li><li>House-made ice cream</li><li>Rare flavours</li><li>Delicious</li>
+            </ul>
+            <ul class="scoop-list scoop-con">
+              <li>Expensive</li><li>Rarely open when you need it</li><li>Relatively small selection of flavours</li><li>Small portions</li>
+            </ul>
+          </article>
+
+          <article class="scoop is-fav" data-fav="true">
+            <h4 class="scoop-name">Il Dolce <span class="scoop-star" title="Expert favourite" aria-label="Expert favourite">★</span></h4>
+            <ul class="scoop-list scoop-pro">
+              <li>Rare flavours</li><li>House-made ice cream</li><li>Delicious</li>
+            </ul>
+            <ul class="scoop-list scoop-con">
+              <li>Pretty full</li><li>Rarely open when you need it</li><li>Small portions</li><li>Relatively small selection of flavours</li>
+            </ul>
+          </article>
+
+          <article class="scoop" data-fav="false">
+            <h4 class="scoop-name">San Marco, Cortina, Cortina II <span class="scoop-note">(they are all the same)</span></h4>
+            <ul class="scoop-list scoop-pro">
+              <li>They exist</li>
+              <li>Always open — San Marco even in winter</li>
+              <li>Cortina II is the only reliably open option in its “area” (rather small scale)</li>
+              <li>Gluten-free cones</li>
+              <li>Some vegan options</li>
+              <li>House-made ice cream (true for at least one of them)</li>
+            </ul>
+            <ul class="scoop-list scoop-con">
+              <li>Too expensive for what you get, quality-wise</li>
+              <li>Gluten-free and vegan cones cost €1.50 extra</li>
+            </ul>
+          </article>
+
+          <article class="scoop is-fav" data-fav="true">
+            <h4 class="scoop-name">Porto Pino <span class="scoop-star" title="Expert favourite" aria-label="Expert favourite">★</span></h4>
+            <ul class="scoop-list scoop-pro">
+              <li>Many different flavours</li><li>Large portions</li>
+              <li>You can split portions into different flavours (recommended)</li>
+              <li>Always open</li><li>Tastes good</li><li>House-made ice cream</li>
+              <li>Directly opposite La Dolce Vita</li>
+            </ul>
+            <ul class="scoop-list scoop-con">
+              <li>Expensive</li><li>Quite few vegan options</li>
+              <li>A bit over-excessive — very overloaded ice cream cans</li>
+              <li>Small cones</li><li>Owner is also a landlord</li>
+            </ul>
+          </article>
+
+          <article class="scoop" data-fav="false">
+            <h4 class="scoop-name">La Dolce Vita</h4>
+            <ul class="scoop-list scoop-pro">
+              <li>Many different flavours</li><li>Large portions</li>
+              <li>Nice terrace with a Neckar view</li><li>Solid quality</li>
+              <li>House-made ice cream</li><li>Directly opposite Porto Pino</li>
+            </ul>
+            <ul class="scoop-list scoop-con">
+              <li>Expensive</li>
+              <li>A bit over-excessive — very overloaded ice cream cans</li>
+            </ul>
+          </article>
+
+          <article class="scoop" data-fav="false">
+            <h4 class="scoop-name">FIGO</h4>
+            <ul class="scoop-list scoop-pro">
+              <li>Many different flavours</li>
+              <li>Just opposite the Stiftskirche — the most popular sitting stairs in Tübingen</li>
+              <li>Always open</li><li>Some vegan options</li><li>Solid quality</li><li>House-made ice cream</li>
+            </ul>
+            <ul class="scoop-list scoop-con">
+              <li>Expensive</li><li>A bit over-abundant</li>
+              <li>It was a book store beforehand, so maybe a downgrade</li>
+            </ul>
+          </article>
+
+          <article class="scoop" data-fav="false">
+            <h4 class="scoop-name">Rino</h4>
+            <ul class="scoop-list scoop-pro">
+              <li>Very good quality</li><li>Exotic flavours</li><li>Cheaper than most in Tübingen</li>
+            </ul>
+            <ul class="scoop-list scoop-con">
+              <li>Located in Rottenburg old town — about 30 min by bike, 20 min by bus</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+
+      <div class="cards cards-2 cards-top-rule">
+        <a class="card" href="#">
+          <div class="ph ph-16-9">
+            <svg preserveAspectRatio="xMidYMid slice"><use href="#m-frame"/></svg>
+            <span class="ph-badge">Placeholder</span>
+          </div>
+          <div class="kicker">Life · Food</div>
+          <h4>Where to Eat Near the AI Center</h4>
+          <p>Five honest lunch options for when the Mensa won't do — from the two-minute grab to the worth-the-walk. Prices, queues, and the one with the good terrace.</p>
+        </a>
+        <div class="aside-box">
+          <div class="aside-heading">You're Not Alone</div>
+          <ul>
+            <li>The <strong>TAPPA Confidants</strong> — a friendly, confidential first point of contact.</li>
+            <li><strong>University psychological counselling</strong>, open to staff and doctoral researchers.</li>
+            <li><strong>Peer support</strong>: who to talk to, and a gentle script for starting.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================ BY THE NUMBERS ============================ -->
+  <section class="chapter" id="numbers">
+    <div class="col">
+      <div class="chapter-head">
+        <span class="n">07</span>
+        <h2>By the Numbers</h2>
+        <span class="sub">One question, answered with data</span>
+      </div>
+      <div class="accent-rule"></div>
+
+      <div class="split split-wide">
+        <div>
+          <div class="kicker">Debate</div>
+          <h3 class="sub-headline">Should We Fly to Conferences?</h3>
+          <p>The question everyone in the programme has an opinion on. Rather than settle it with anecdotes, put your own year into the estimator and see what it comes to.</p>
+
+          <form class="estimator" id="estimator" onsubmit="return false;">
+            <div class="est-row">
+              <label for="est-trips">Conferences a year</label>
+              <input type="number" id="est-trips" value="3" min="0" max="20" step="1">
+            </div>
+            <div class="est-row">
+              <label for="est-km">Typical one-way distance <span class="est-unit">km</span></label>
+              <input type="number" id="est-km" value="1200" min="0" max="20000" step="50">
+            </div>
+            <div class="est-row">
+              <label for="est-factor">Emission factor <span class="est-unit">kg CO₂e per passenger-km</span></label>
+              <input type="number" id="est-factor" value="0.18" min="0" max="1" step="0.01">
+            </div>
+
+            <div class="est-out">
+              <div class="est-figure">
+                <output id="est-total" for="est-trips est-km est-factor">—</output>
+                <span class="est-caption">CO₂e a year, flying return</span>
+              </div>
+              <div class="est-track"><span class="est-bar" id="est-bar"></span></div>
+              <p class="est-compare">Roughly <output id="est-compare">—</output> if the same trips went by rail.</p>
+            </div>
+          </form>
+
+          <p class="est-note">The default emission factor and the rail comparison are placeholders — replace both with a figure the editors can cite before this goes out.</p>
+
+          <div class="aside-box aside-box-ink" style="margin-top:26px">
+            <div class="aside-heading">News · PhD Salary: Where Things Stand</div>
+            <p>A plain-language status check on the ongoing debate over PhD contracts and pay — what shifted this quarter, what is still open, and where to follow along.</p>
+            <a class="arrow-link" href="#">→ The full timeline</a>
+          </div>
+        </div>
+
+        <figure class="fig">
+          <div class="ph ph-4-3">
+            <svg preserveAspectRatio="xMidYMid slice"><use href="#m-steps"/></svg>
+            <span class="ph-badge">Chart placeholder</span>
+          </div>
+          <figcaption class="figcaption">
+            <span class="fignum">Figure 8 |</span> Replace with the real chart once the numbers are in.
+            <span class="credit">Illustration: TAPPA design team</span>
+          </figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================ FINAL PAGE ============================ -->
+  <section class="chapter chapter-warm" id="final">
+    <div class="col">
+      <div class="chapter-head">
+        <span class="n">08</span>
+        <h2>Final Page</h2>
+        <span class="sub">Answers upside down, naturally</span>
+      </div>
+      <div class="accent-rule"></div>
+
+      <div class="split split-wide">
+        <div>
+          <div class="kicker">Fun · Puzzle</div>
+          <h3 class="sub-headline">Guess the PI</h3>
+          <p>Five Tübingen professors, five first-paper titles. Match them up — no need to turn the page upside down this time.</p>
+
+          <div class="puzzle" id="puzzle">
+            <div class="tile-col tile-col-a">
+              <button class="tile" type="button" data-side="a" data-pair="1">[Professor 1]</button>
+              <button class="tile" type="button" data-side="a" data-pair="2">[Professor 2]</button>
+              <button class="tile" type="button" data-side="a" data-pair="3">[Professor 3]</button>
+              <button class="tile" type="button" data-side="a" data-pair="4">[Professor 4]</button>
+              <button class="tile" type="button" data-side="a" data-pair="5">[Professor 5]</button>
+            </div>
+            <div class="tile-col tile-col-b">
+              <button class="tile tile-b" type="button" data-side="b" data-pair="1">[First paper 1]</button>
+              <button class="tile tile-b" type="button" data-side="b" data-pair="2">[First paper 2]</button>
+              <button class="tile tile-b" type="button" data-side="b" data-pair="3">[First paper 3]</button>
+              <button class="tile tile-b" type="button" data-side="b" data-pair="4">[First paper 4]</button>
+              <button class="tile tile-b" type="button" data-side="b" data-pair="5">[First paper 5]</button>
+            </div>
+          </div>
+
+          <p class="puzzle-meta">
+            <span id="puzzle-status" aria-live="polite">Pick a name, then its first paper.</span>
+            <button class="poll-reset" type="button" id="puzzle-reset">Shuffle &amp; restart</button>
+          </p>
+          <p class="est-note">Names and titles are placeholders — drop in the real five before publishing.</p>
+        </div>
+
+        <div>
+          <div class="kicker">Fun · Quiz</div>
+          <h3 class="sub-headline">Do You Know Your Reps?</h3>
+          <p>Five questions, and no points for guessing.</p>
+
+          <div class="quiz" id="quiz">
+            <div class="quiz-bar"><span class="quiz-bar-fill" id="quiz-bar"></span></div>
+
+            <div class="quiz-stage" id="quiz-stage">
+              <p class="quiz-step" id="quiz-step">Question 1 of 5</p>
+              <p class="quiz-q" id="quiz-q"></p>
+              <div class="quiz-options" id="quiz-options"></div>
+              <p class="quiz-feedback" id="quiz-feedback" aria-live="polite"></p>
+            </div>
+
+            <div class="quiz-result" id="quiz-result" hidden>
+              <p class="quiz-score"><span id="quiz-score">0</span><span class="quiz-score-of">/ 5</span></p>
+              <p class="quiz-verdict" id="quiz-verdict"></p>
+              <button class="quiz-again" type="button" id="quiz-again">Try again</button>
+            </div>
+          </div>
+          <p class="est-note">Questions and answers are placeholders — swap in your real reps before publishing.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================ CREDITS ============================ -->
+  <section class="chapter" id="credits">
+    <div class="col">
+      <div class="chapter-head">
+        <span class="n">09</span>
+        <h2>Masthead &amp; Credits</h2>
+        <span class="sub">Who made Issue 00</span>
+      </div>
+      <div class="accent-rule"></div>
+
+      <div class="cards cards-3">
+        <div class="card card-plain">
+          <div class="kicker">Editorial</div>
+          <h4>Editors &amp; writers</h4>
+          <p>Interview by <strong>Haiwen</strong>. Ice cream parlours by <strong>Fynn</strong>. What's on compiled by <strong>rabanus</strong>. [Add the rest of the editorial team here.]</p>
+        </div>
+        <div class="card card-plain">
+          <div class="kicker">Design</div>
+          <h4>Design &amp; illustration</h4>
+          <p>All figures in this issue are drawn placeholders by the TAPPA design team, in the house palette. Replace each with a photograph and credit its photographer on the caption line.</p>
+        </div>
+        <div class="card card-plain">
+          <div class="kicker">Photography</div>
+          <h4>Photographs</h4>
+          <p>Photographs by the TAPPA design team. Individual credits appear beneath each image.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================ SUBSCRIBE ============================ -->
+  <section class="subscribe" id="subscribe">
+    <div class="col subscribe-inner">
+      <div class="subscribe-text">
+        <h2>Get the next issue</h2>
+        <p>TAPPA Quarterly goes out once a quarter over the university mailing list. Subscribing, unsubscribing and your data are all handled by the university's own list server — we never see or store your address.</p>
+      </div>
+      <div class="subscribe-actions">
+        <!-- TODO: point this at your Mailman/Sympa list, e.g.
+             https://lists.uni-tuebingen.de/mailman/listinfo/tappa -->
+        <a class="subscribe-cta" href="#" data-todo="mailing-list-url">Subscribe via the university list</a>
+        <a class="subscribe-alt" href="#" data-todo="mailing-list-url">Manage or cancel your subscription</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ============================ IMPRESSUM ============================ -->
+<section class="legal" id="impressum">
+  <div class="col">
+    <div class="legal-head">
+      <h2>Impressum &amp; Datenschutz</h2>
+      <span class="legal-sub">Angaben gemäß § 5 DDG · Legal notice &amp; privacy</span>
+    </div>
+
+    <div class="legal-grid">
+      <!-- ---------------- Impressum ---------------- -->
+      <div class="legal-col">
+        <h3>Impressum</h3>
+
+        <dl class="legal-dl">
+          <dt>Diensteanbieter</dt>
+          <dd>
+            [TAPPA — full legal name of the group or association]<br>
+            [Legal form, e.g. nicht eingetragene Studierendeninitiative / e.V.]<br>
+            [Street and number]<br>
+            [72076 Tübingen, Germany]
+          </dd>
+
+          <dt>Vertreten durch</dt>
+          <dd>[Name(s) of the chair or responsible board members]</dd>
+
+          <dt>Kontakt</dt>
+          <dd>
+            E-Mail: <a href="mailto:tappa@example.uni-tuebingen.de">[tappa@example.uni-tuebingen.de]</a><br>
+            Telefon: [+49 …]
+          </dd>
+
+          <dt>Registereintrag</dt>
+          <dd>[Vereinsregister … / Amtsgericht … / VR … — or delete this entry if not registered]</dd>
+
+          <dt>Verantwortlich für den Inhalt<br><span class="legal-fine">nach § 18 Abs. 2 MStV</span></dt>
+          <dd>
+            [Name of the responsible editor]<br>
+            [Street and number]<br>
+            [72076 Tübingen, Germany]
+          </dd>
+        </dl>
+
+        <h4>Haftung für Links</h4>
+        <p>Diese Seite verlinkt auf externe Websites Dritter, auf deren Inhalte wir keinen Einfluss haben. Für diese fremden Inhalte ist stets der jeweilige Anbieter verantwortlich.</p>
+
+        <h4>Urheberrecht · Copyright</h4>
+        <p>Beiträge und Bilder sind Eigentum der jeweiligen Autorinnen und Autoren; sie sind bei den einzelnen Artikeln genannt. Die Schriften Spectral und Inter stehen unter der SIL Open Font License 1.1.</p>
+      </div>
+
+      <!-- ---------------- Datenschutz ---------------- -->
+      <div class="legal-col">
+        <h3>Datenschutzerklärung</h3>
+        <p class="legal-lede">Kurzfassung: Diese Seite setzt keine Tracking-Cookies, bindet keine Dienste Dritter ein und erhebt keine personenbezogenen Daten.</p>
+
+        <h4>Keine Analyse, kein Tracking</h4>
+        <p>Es kommen weder Analyse-Werkzeuge noch Werbenetzwerke zum Einsatz. Es werden keine Cookies gesetzt.</p>
+
+        <h4>Schriften</h4>
+        <p>Spectral und Inter werden von diesem Server ausgeliefert, nicht über ein Google-CDN. Beim Laden der Seite wird also keine IP-Adresse an Dritte übertragen.</p>
+
+        <h4>Lokale Speicherung</h4>
+        <p>Die Umfrage merkt sich Ihre eigene Antwort im <code>localStorage</code> Ihres Browsers, damit sie angezeigt werden kann. Diese Angabe verlässt Ihr Gerät nicht und lässt sich durch Löschen der Browserdaten entfernen.</p>
+
+        <h4>Umfrage</h4>
+        <p>Sofern die Umfrage serverseitig gezählt wird, speichert der Server ausschließlich einen mit einem Geheimnis gesalzenen SHA-256-Hash der IP-Adresse, um Mehrfachabstimmungen zu begrenzen. Die IP-Adresse selbst wird nicht gespeichert; die Hashes werden nach 90 Tagen gelöscht.</p>
+
+        <h4>Newsletter</h4>
+        <p>Der Versand läuft über die Mailingliste der Universität. An- und Abmeldung sowie die Verarbeitung Ihrer Adresse erfolgen dort; wir sehen und speichern keine E-Mail-Adressen. Es gilt die Datenschutzerklärung der Universität Tübingen.</p>
+
+        <h4>Hosting</h4>
+        <p>Die Seite wird bei [hosting provider] gehostet. Beim Abruf werden dort technisch notwendige Server-Logs (u. a. IP-Adresse) verarbeitet. Rechtsgrundlage ist Art. 6 Abs. 1 lit. f DSGVO.</p>
+
+        <h4>Ihre Rechte</h4>
+        <p>Sie haben das Recht auf Auskunft, Berichtigung, Löschung, Einschränkung der Verarbeitung, Datenübertragbarkeit und Widerspruch sowie ein Beschwerderecht bei einer Aufsichtsbehörde. Wenden Sie sich dafür an die oben genannte Kontaktadresse.</p>
+      </div>
+    </div>
+
+    <p class="legal-note">Alle Angaben in eckigen Klammern müssen vor der Veröffentlichung ersetzt werden. Dieser Entwurf ist keine Rechtsberatung — bitte einmal von der Universität oder dem AStA gegenlesen lassen.</p>
+  </div>
+</section>
+
+<footer class="colophon">
+  <div class="col colophon-inner">
+    <p>TAPPA Quarterly is written and edited by the Tübingen AI PhD &amp; postdoc community.</p>
+    <p><a href="#impressum">Impressum &amp; Datenschutz</a> · © 2026 TAPPA · House Style v0.1</p>
+  </div>
+</footer>
+
+<dialog class="lightbox" id="lightbox" aria-label="Enlarged figure">
+  <button class="lightbox-close" type="button" id="lightbox-close" aria-label="Close">&times;</button>
+  <div class="lightbox-stage" id="lightbox-stage"></div>
+  <p class="lightbox-caption" id="lightbox-caption"></p>
+</dialog>
+
+<script src="app.js"></script>
+
+</body>
+</html>
